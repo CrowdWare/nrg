@@ -1,0 +1,9 @@
+<Site theme="atropos" theme_accent="green" description="Crypto Currency based on Time" github="https://github.com/crowdware/nrg" copyright="&amp;copy; 2017 CrowdWare. All Right Reserved." title="NRG-Exchange">
+ <Content layout="default" date="26.08.2017" type="page" author="admin" source="index.xml" title="Index" menu="default"/>
+ <Menu name="default">
+  <Item url="#wrapper" title="Home"/>
+<Item url="#situation" title="Situation"/>
+<Item url="#solution" title="Solution"/>
+<Item url="#help" title="Help"/>
+ </Menu>
+</Site>
