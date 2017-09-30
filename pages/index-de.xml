@@ -1,29 +1,27 @@
-<Content>
- <Section fullwidth="true">
-  <Row>
-   <Column span="12">
-    <Text adminlabel="Slider"><![CDATA[<div class="fullwidthbanner-container roundedcorners">
+<?xml version="1.0" encoding="UTF-8"?>
+<Content title="NRG Exchange" menu="default-de" logo="logo.png" author="Olaf" layout="default" keywords="" date="29.09.2017">
+    <Section fullwidth="true">
+        <Row>
+            <Column span="12"><Text adminlabel="Slider"><![CDATA[<div class="fullwidthbanner-container roundedcorners">
 	<div class="fullwidthbanner">
 		<ul> 
 			<!-- SLIDE -->
 			<li data-transition="incube-horizontal" data-slotamount="5" data-masterspeed="700" >
-				<img src="assets/images/happypeople.png" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+				<img src="assets/images/happypeople.png" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
 			</li>
 			<!-- SLIDE -->
 			<li data-transition="incube-horizontal" data-slotamount="5" data-masterspeed="700" >
-				<img src="assets/images/tagcloud.png" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+				<img src="assets/images/tagcloud.png" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
 			</li>
 		</ul>
 		<div class="tp-bannertimer"></div>
 	</div>
-</div>]]></Text>
-   </Column>
-  </Row>
- </Section>
- <Section>
-  <Row>
-   <Column span="12">
-    <Text adminlabel="Willkommen"><![CDATA[<h1>
+</div>]]></Text></Column>
+        </Row>
+    </Section>
+    <Section id="situation">
+        <Row>
+            <Column span="12"><Text adminlabel="Willkommen"><![CDATA[<h1>
 	<strong>Willkommen</strong> bei NRG-Exchange
 	<span class="subtitle">WIR SIND SEHR FROH DAS DU UNS GEFUNDEN HAST</span>
 </h1>
@@ -89,14 +87,12 @@
 <p class="lead">
 Möchtest du wissen, wie man diese Situation lösen kann? Dann les weiter.
 </p>
-]]></Text>
-   </Column>
-  </Row>
- </Section>
- <Section style="background-image: url('assets/images/natur.jpg');" attributes="data-stellar-background-ratio=&quot;0.7&quot;" cssclass="parallax margin-top80" fullwidth="true">
-  <Row>
-   <Column span="12">
-    <Text adminlabel="Parallax"><![CDATA[<div class="container">
+]]></Text></Column>
+        </Row>
+    </Section>
+    <Section cssclass="parallax margin-top80" style="background-image: url('assets/images/natur.jpg');" attributes="data-stellar-background-ratio=&quot;0.7&quot;" fullwidth="true">
+        <Row>
+            <Column span="12"><Text adminlabel="Parallax"><![CDATA[<div class="container">
 	<div class="row animation_fade_in">
 		<div class="col-md-6">
 			<div class="white-row">
@@ -107,14 +103,12 @@ Möchtest du wissen, wie man diese Situation lösen kann? Dann les weiter.
 			</div>
 		</div>
 	</div>
-</div>]]></Text>
-   </Column>
-  </Row>
- </Section>
- <Section id="solution" cssclass="margin-top100">
-  <Row>
-   <Column span="12">
-    <Text adminlabel="Lösung"><![CDATA[<h3><strong>Lösung</strong></h3>
+</div>]]></Text></Column>
+        </Row>
+    </Section>
+    <Section id="solution" cssclass="margin-top100">
+        <Row>
+            <Column span="12"><Text adminlabel="Lösung"><![CDATA[<h3><strong>Lösung</strong></h3>
 <p class="lead">
 Da gibt es einen Mann in Deutschland, der die <a href="http://www.minutocash.org">Minutos</a> erfunden hat.
 </p>
@@ -183,14 +177,12 @@ Zuerst werden die NRG's von dem Hamburger mit einem Bekannten in Hannover getaus
 Dann werden die NRG's von dem Hannoveraner mit jemanden in Kassel getauscht.
 Die NRG's aus Kassel werden dann mit jemanden in Würzburg getauscht. Diese werden wiederum in Nürnberg getauscht und schliesslich wird der Münchner damit bezahlt.
 Irgendwann könnte es sogar möglich sein, dass wir damit weltweit bezahlen können.
-</p>]]></Text>
-   </Column>
-  </Row>
- </Section>
- <Section style="background-image: url('assets/images/natur2.jpg');" attributes="data-stellar-background-ratio=&quot;0.7&quot;" cssclass="parallax margin-top80" fullwidth="true">
-  <Row>
-   <Column span="12">
-    <Text adminlabel="Parallax"><![CDATA[<div class="container">
+</p>]]></Text></Column>
+        </Row>
+    </Section>
+    <Section cssclass="parallax margin-top80" style="background-image: url('assets/images/natur2.jpg');" attributes="data-stellar-background-ratio=&quot;0.7&quot;" fullwidth="true">
+        <Row>
+            <Column span="12"><Text adminlabel="Parallax"><![CDATA[<div class="container">
 	<div class="row animation_fade_in">
 		<div class="col-md-6"></div>
 		<div class="col-md-6">
@@ -202,33 +194,28 @@ Irgendwann könnte es sogar möglich sein, dass wir damit weltweit bezahlen kön
 			</div>
 		</div>
 	</div>
-</div>]]></Text>
-   </Column>
-  </Row>
- </Section>
- <Section id="help" cssclass="margin-top100">
-  <Row>
-   <Column span="12">
-    <Text adminlabel=""><![CDATA[<h3><strong>Möchtest du gerne dabei helfen?</strong></h3>
+</div>]]></Text></Column>
+        </Row>
+    </Section>
+    <Section id="help" cssclass="margin-top100">
+        <Row>
+            <Column span="12"><Text adminlabel=""><![CDATA[<h3><strong>Möchtest du gerne dabei helfen?</strong></h3>
 <p class="lead">
 Zur Zeit ist dies lediglich nur eine Idee.
 Wir haben gerade erst angefangen, darüber nachzudenken.
 Wenn du gerne helfen möchtest, dann lass es uns wissen.
 Wir brauchen Leute mit Ideen, Softwareentwickler, Menschen die diese Ideen weitergeben möchten, Leute die die Lösung später testen, Menschen die mit Spenden helfen wollen usw.
 </p>
-]]></Text>
-   </Column>
-  </Row>
- </Section>
- <Section>
-  <Row>
-   <Column span="12">
-    <Text adminlabel=""><![CDATA[<!-- CALLOUT -->
+]]></Text></Column>
+        </Row>
+    </Section>
+    <Section>
+        <Row>
+            <Column span="12"><Text adminlabel=""><![CDATA[<!-- CALLOUT -->
 <div class="bs-callout text-center styleBackground">
-	<h3>Ich möchte dabei <strong>helfen</strong>, NRG in die Welt zu bringen.<a href="mailto:artanidos@gmail.com" target="_self" class="btn btn-primary btn-lg">Send us an email</a></h3>
+	<h3>Ich möchte dabei <strong>helfen</strong>, NRG in die Welt zu bringen.<a href="mailto:artanidos@gmail.com" target="_self" class="btn btn-primary btn-lg">Sende uns eine Email</a></h3>
 </div>
-<!-- /CALLOUT -->]]></Text>
-   </Column>
-  </Row>
- </Section>
+<!-- /CALLOUT -->]]></Text></Column>
+        </Row>
+    </Section>
 </Content>

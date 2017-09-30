@@ -1,24 +1,2 @@
-<Site github="https://github.com/crowdware/nrg" copyright="&amp;copy; 2017 CrowdWare. All Right Reserved." theme_accent="green" author="" keywords="" theme="atropos" description="Crypto Currency based on Time" title="NRG-Exchange">
- <Content menu="default-en" type="page" logo="logo.png" date="26.08.2017" layout="default" author="admin" keywords="" source="index-en.xml" title="Index"/>
- <Content menu="default-de" type="page" logo="logo.png" date="04.09.2017" layout="default" author="author" keywords="" source="index.xml" title="Index"/>
- <Menu name="default-de">
-  <Item url="#wrapper" icon="" title="Home"/>
-  <Item url="#situation" icon="" title="Situation"/>
-  <Item url="#solution" icon="" title="Lösung"/>
-  <Item url="#help" icon="" title="Hilfe"/>
-  <Item url="#" icon="assets/images/flags/de.png" title="Deutsch">
-   <Item url="index-en.html" icon="assets/images/flags/us.png" title="[US] English"/>
-   <Item url="#" icon="assets/images/flags/de.png" title="[DE] Deutsch"/>
-  </Item>
- </Menu>
-<Menu name="default-en">
-  <Item url="#wrapper" icon="" title="Home"/>
-  <Item url="#situation" icon="" title="Situation"/>
-  <Item url="#solution" icon="" title="Solution"/>
-  <Item url="#help" icon="" title="Help"/>
-  <Item url="#" icon="assets/images/flags/us.png" title="English">
-   <Item url="#" icon="assets/images/flags/us.png" title="[US] English"/>
-   <Item url="index.html" icon="assets/images/flags/de.png" title="[DE] Deutsch"/>
-  </Item>
- </Menu>
-</Site>
+<?xml version="1.0" encoding="UTF-8"?>
+<Site theme="atropos" title="NRG-Exchange" description="Crypto Currency based on Time" copyright="&amp;copy; 2017 CrowdWare. All Right Reserved." keywords="" author="" publisher="NoPublisher"/>
