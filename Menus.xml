@@ -17,7 +17,7 @@
         <Item title="Help" url="#help" icon=""/>
         <Item title="English" url="#" icon="assets/images/flags/us.png">
             <Item title="[US] English" url="#" icon="assets/images/flags/us.png"/>
-            <Item title="[DE] Deutsch" url="index-de.html" icon="assets/images/flags/de.png"/>
+            <Item title="[DE] Deutsch" url="index.html" icon="assets/images/flags/de.png"/>
         </Item>
     </Menu>
 </Menus>
