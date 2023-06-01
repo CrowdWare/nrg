@@ -24,7 +24,8 @@ If everything looks good then B signs an agreement that he trusts A and is willi
 Then also B is presenting a QR code and A has to sign the agreement.  
 When a user was able to connect to two other users, then his app will start to create NRG tokens on a 20 minutes base. These tokens are kind of signed by the other two users, because they agreed to do so.  
 
-Each user is able to create 12 tokens each day, when he finds two people who trusts him and the app he's using. Of course the procedure of exchanging public keys is technically checking the account of the other user to be sure that he's using the original version and no faked app.  
+Each user is able to create 12 tokens each day, when he finds two people who trusts him and the app he's using. Of course the procedure of exchanging public keys is technically checking the account of the other user to be sure that he's using the original version and no faked app. 
+After collecting toker for 10 days you have 12 NRG tokens which are worth 2 hours (2 * 60 minutes) of work.
 
 After creating enough NRG tokens the user is able to transfer tokens to other apps also using QR code technique combined with BT.  
 
