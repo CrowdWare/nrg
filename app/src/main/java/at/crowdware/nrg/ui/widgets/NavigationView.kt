@@ -44,7 +44,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import at.crowdware.nrg.ui.pages.Friendlist
-import at.crowdware.nrg.ui.pages.MainPage
+import at.crowdware.nrg.ui.pages.ScoopPage
 import kotlinx.coroutines.launch
 
 @Composable
@@ -60,7 +60,7 @@ fun NavigationView(items: MutableList<NavigationItem>) {
                 NavigationDrawer(items, selectedItem) {
                     when(items[index].id) {
                         // have a look at MainActivity for navigation
-                        "home" -> MainPage()
+                        "home" -> ScoopPage()
                         "friendlist" -> Friendlist()
                         //"settings" -> Settings()
                         //"receive_gratitude" -> ReceiveGratitude(receiveViewModel)
@@ -128,7 +128,7 @@ fun About(openDialog: Boolean, onDismiss: () -> Unit) {
     if (openDialog) {
         AlertDialog(
             onDismissRequest = onDismiss,
-            title = { Text(text = "Aboout") },
+            title = { Text(text = "About") },
             text = {
                 Text(
                     "Todo"

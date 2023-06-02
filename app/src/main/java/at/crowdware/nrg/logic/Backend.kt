@@ -17,21 +17,13 @@
  *  along with NRG.  If not, see <http://www.gnu.org/licenses/>.
  *
  ****************************************************************************/
-package at.crowdware.nrg.ui.pages
+package at.crowdware.nrg.logic
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-
-@Composable
-fun MainPage() {
-    Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
-        Text("MainPage", fontSize = 20.sp, fontWeight = FontWeight.Bold)
+class Backend {
+    companion object {
+        fun getTransactions(): MutableList<Transaction> {
+            val list: MutableList<Transaction> = mutableListOf()
+            return list
+        }
     }
 }

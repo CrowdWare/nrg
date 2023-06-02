@@ -29,6 +29,7 @@ import androidx.compose.material.icons.filled.Home
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import at.crowdware.nrg.ui.theme.NrgTheme
 import at.crowdware.nrg.ui.widgets.NavigationItem
 import at.crowdware.nrg.ui.widgets.NavigationView
@@ -49,11 +50,13 @@ class MainActivity : ComponentActivity() {
                         //NavigationItem("settings", Icons.Default.Settings, stringResource(R.string.settings)),
                         NavigationItem("divider")
                     )
+                    val context = LocalContext.current
+
                     //PluginManager.loadPlugins(LocalContext.current, list)
                     // navigation targets which are not listed in the drawer
-                    list.add(NavigationItem(id="receive_gratitude_qrcode"))
-                    list.add(NavigationItem(id="receive_gratitude"))
-                    list.add(NavigationItem(id="give_gratitude"))
+                    //list.add(NavigationItem(id = "receive_gratitude_qrcode"))
+                    //list.add(NavigationItem(id = "receive_gratitude"))
+                    //list.add(NavigationItem(id = "give_gratitude"))
                     NavigationView(list)
                 }
             }

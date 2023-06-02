@@ -17,28 +17,32 @@
  *  along with NRG.  If not, see <http://www.gnu.org/licenses/>.
  *
  ****************************************************************************/
-package at.crowdware.nrg.ui.theme
+package at.crowdware.nrg.logic
 
-import androidx.compose.ui.graphics.Color
+import java.io.Serializable
+import java.time.LocalDate
 
-val PrimaryDark = Color(0xFFa0ce4d)
-val SecondaryDark = Color(0xFFa0ce4d)
-val TertiaryDark = Color(0xFFa0ce4d)
-val BackgroundDark = Color(0xFF1a1a1a)
-val SurfaceDark = Color(0xFF1a1a1a)
-val OnPrimaryDark = Color(0xFF000000)
-val OnSecondaryDark = Color(0xFF000000)
-val OnTertiaryDark = Color(0xFF000000)
-val OnBackgroundDark = Color(0xFFFFFFFF)
-val OnSurfaceDark = Color(0xFFFFFFFF)
+enum class TransactionType(val value: UInt) {
+    INITIAL_BOOKING(1u),
+    SCOOPED(2u),
+    LMP(3u);
 
-val PrimaryLight = Color(0xFFa0ce4d)
-val SecondaryLight = Color(0xFFa0ce4d)
-val TertiaryLight = Color(0xFFa0ce4d)
-val BackgroundLight = Color(0xFF1a1a1a)
-val SurfaceLight = Color(0xFF1a1a1a)
-val OnPrimaryLight = Color(0xFF000000)
-val OnSecondaryLight = Color(0xFF000000)
-val OnTertiaryLight = Color(0xFF000000)
-val OnBackgroundLight = Color(0xFFFFFFFF)
-val OnSurfaceLight = Color(0xFFFFFFFF)
+    override fun toString(): String {
+        return value.toString()
+    }
+
+    companion object {
+        fun fromString(valueString: String): TransactionType {
+            return values().find { it.value.toString() == valueString }
+                ?: throw IllegalArgumentException("Invalid TransactionType value: $valueString")
+        }
+    }
+}
+
+data class Transaction(
+    var amount: Long,
+    var from: String,
+    val date: LocalDate,
+    var purpose: String = "",
+    var type: TransactionType):
+    Serializable
