@@ -19,6 +19,7 @@
  ****************************************************************************/
 package at.crowdware.nrg
 
+import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -29,7 +30,8 @@ import androidx.compose.material.icons.filled.Home
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
+import at.crowdware.nrg.logic.LocaleManager
 import at.crowdware.nrg.ui.theme.NrgTheme
 import at.crowdware.nrg.ui.widgets.NavigationItem
 import at.crowdware.nrg.ui.widgets.NavigationView
@@ -44,15 +46,12 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    LocaleManager.init(applicationContext, resources)
                     val list = mutableListOf(
-                        NavigationItem("home", Icons.Default.Home, "Home"),
-                        NavigationItem("friendlist", Icons.Default.Face, "Friendlist"),
-                        //NavigationItem("settings", Icons.Default.Settings, stringResource(R.string.settings)),
+                        NavigationItem("home", Icons.Default.Home, stringResource(R.string.navigation_home)),
+                        NavigationItem("friendlist", Icons.Default.Face, stringResource(R.string.navigation_friendlist)),
                         NavigationItem("divider")
                     )
-                    val context = LocalContext.current
-
-                    //PluginManager.loadPlugins(LocalContext.current, list)
                     // navigation targets which are not listed in the drawer
                     //list.add(NavigationItem(id = "receive_gratitude_qrcode"))
                     //list.add(NavigationItem(id = "receive_gratitude"))
@@ -61,5 +60,9 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+
+    override fun attachBaseContext(newBase: Context?) {
+        super.attachBaseContext(LocaleManager.wrapContext(newBase!!))
     }
 }

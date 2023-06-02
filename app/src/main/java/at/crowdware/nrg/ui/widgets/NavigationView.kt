@@ -40,9 +40,11 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.res.stringResource
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import at.crowdware.nrg.R
 import at.crowdware.nrg.ui.pages.Friendlist
 import at.crowdware.nrg.ui.pages.ScoopPage
 import kotlinx.coroutines.launch
@@ -62,14 +64,9 @@ fun NavigationView(items: MutableList<NavigationItem>) {
                         // have a look at MainActivity for navigation
                         "home" -> ScoopPage()
                         "friendlist" -> Friendlist()
-                        //"settings" -> Settings()
                         //"receive_gratitude" -> ReceiveGratitude(receiveViewModel)
                         //"receive_gratitude_qrcode" -> ReceiveGratitudeQRCode(receiveViewModel)
                         //"give_gratitude" -> GiveGratitude(giveViewModel)
-                        else -> {
-                            val plugin = items[index].plugin
-                            plugin!!.pages()[items[index].index].invoke()
-                        }
                     }
                 }
             }
@@ -128,10 +125,10 @@ fun About(openDialog: Boolean, onDismiss: () -> Unit) {
     if (openDialog) {
         AlertDialog(
             onDismissRequest = onDismiss,
-            title = { Text(text = "About") },
+            title = { Text(text = stringResource(R.string.about_nrg)) },
             text = {
                 Text(
-                    "Todo"
+                    stringResource(R.string.about_dialog_text)
                 )
             },
             confirmButton = { TextButton(onClick = onDismiss ) { Text("OK") } },

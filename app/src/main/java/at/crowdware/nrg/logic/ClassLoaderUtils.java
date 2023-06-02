@@ -17,15 +17,16 @@
  *  along with NRG.  If not, see <http://www.gnu.org/licenses/>.
  *
  ****************************************************************************/
-package at.crowdware.nrg
+package at.crowdware.nrg.logic;
 
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.vector.ImageVector
+import android.content.Context;
 
-interface NrgPlugin {
-    fun getName(): String
-    fun getVersion(): String
-    fun menuTexts(): List<String>
-    fun icons(): List<ImageVector>
-    fun pages(): List<@Composable () -> Unit>
+import dalvik.system.DexClassLoader;
+
+public class ClassLoaderUtils
+{
+    public Class<?> loadClass(String apkPath, Context context) throws ClassNotFoundException {
+        final ClassLoader classLoader = new DexClassLoader(apkPath, context.getCacheDir().getAbsolutePath(), null, this.getClass().getClassLoader());
+        return classLoader.loadClass("at.crowdware.nrg.plugin.Plugin");
+    }
 }

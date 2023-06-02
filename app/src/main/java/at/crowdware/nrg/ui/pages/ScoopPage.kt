@@ -100,6 +100,7 @@ fun ScoopPage(isPreview: Boolean = false) {
         isScooping = true
 
     }
+    /*
     LaunchedEffect(true) {
         while (true) {
             //isScooping = Backend.getAccount().isScooping
@@ -113,7 +114,6 @@ fun ScoopPage(isPreview: Boolean = false) {
         delay(3000L)
     }
 
-    /*
     ServiceStartRequest(
         openDialog = openDialog.value,
         onDismiss = { openDialog.value = false },

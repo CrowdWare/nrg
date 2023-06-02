@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">NRG</string>
+    <string name="language_english">Inglés</string>
+    <string name="language_german">Alemán</string>
+    <string name="language_spanish">Español</string>
+    <string name="language_french">Francés</string>
+    <string name="language_portugues">Portugués</string>
+    <string name="language_esperanto">Esperanto</string>
+    <string name="select_preferred_language">Selecciona el idioma preferido</string>
+    <string name="navigation_home">Inicio</string>
+    <string name="navigation_friendlist">Lista de amigos</string>
+    <string name="navigation_about">Acerca de</string>
+    <string name="about_nrg">Acerca de NRG EXCHANGE</string>
+    <string name="about_dialog_text">NRG EXCHANGE es la idea de crear un nuevo tipo de medio que podemos utilizar para intercambios de energía. Como mostrar gratitud a alguien que nos brindó un servicio, para que no tengamos que pagar con dinero.</string>
+
+</resources>

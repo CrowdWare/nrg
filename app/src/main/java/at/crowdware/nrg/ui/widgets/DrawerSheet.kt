@@ -19,6 +19,7 @@
  ****************************************************************************/
 package at.crowdware.nrg.ui.widgets
 
+import android.app.Activity
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -53,22 +54,33 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import at.crowdware.nrg.R
+import at.crowdware.nrg.logic.LocaleManager
 import at.crowdware.nrg.ui.theme.NrgTheme
 import kotlinx.coroutines.launch
-import at.crowdware.nrg.NrgPlugin
 
 
-data class NavigationItem(val id: String, val icon: ImageVector? = null, val text: String = "", val plugin: NrgPlugin? = null, val index: Int = 0)
+data class NavigationItem(val id: String, val icon: ImageVector? = null, val text: String = "", val index: Int = 0)
 
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DrawerSheet(drawerState: DrawerState, items: List<NavigationItem>, selectedItem: MutableState<String>) {
     val scope = rememberCoroutineScope()
+    val context = LocalContext.current
+    val currentActivity = LocalContext.current as? Activity
+    val languages = LocaleManager.getLanguages()
+    val index = LocaleManager.getLanguageIndex()
+    val onSelectedIndexChanged: (Int) -> Unit = { idx ->
+        LocaleManager.setLocale(context, idx)
+        currentActivity?.recreate()
+    }
+    val stateHolderLanguage =
+        rememberDropDownListboxStateHolder(languages, index, onSelectedIndexChanged)
 
     if ( drawerState.offset.value > -540f) {
         ModalDrawerSheet(
@@ -118,6 +130,11 @@ fun DrawerSheet(drawerState: DrawerState, items: List<NavigationItem>, selectedI
                     }
                 }
             }
+            DropDownListbox(
+                label = stringResource(R.string.select_preferred_language),
+                stateHolder = stateHolderLanguage,
+                modifier = Modifier.padding(16.dp)
+            )
         }
     }
 }
@@ -128,8 +145,8 @@ fun DrawerSheet(drawerState: DrawerState, items: List<NavigationItem>, selectedI
 fun DrawerPreview() {
     val selectedItem = remember { mutableStateOf("Mate list") }
     val list = mutableListOf(
-        NavigationItem("home", Icons.Default.Home, "Home"),
-        NavigationItem("", Icons.Default.Face, "Friendlist")
+        NavigationItem("home", Icons.Default.Home, stringResource(R.string.navigation_home)),
+        NavigationItem("", Icons.Default.Face, stringResource(R.string.navigation_friendlist))
     )
     NrgTheme {
         Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {

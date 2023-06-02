@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">NRG</string>
     <string name="language_english">English</string>
-    <string name="language_german">Deutsch</string>
-    <string name="language_spanish">Español</string>
-    <string name="language_french">Français</string>
-    <string name="language_portugues">Português</string>
+    <string name="language_german">German</string>
+    <string name="language_spanish">Spanish</string>
+    <string name="language_french">French</string>
+    <string name="language_portugues">Portuguese</string>
     <string name="language_esperanto">Esperanto</string>
     <string name="select_preferred_language">Select preferred language</string>
     <string name="navigation_home">Home</string>
