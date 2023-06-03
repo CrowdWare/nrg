@@ -1,6 +1,17 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
+def getProps(String propName) {
+    def propsFile = rootProject.file('config.properties')
+    if (propsFile.exists()) {
+        def props = new Properties()
+        props.load(new FileInputStream(propsFile))
+        return props[propName]
+    } else {
+        return "";
+    }
+}
+
 android {
     namespace 'at.crowdware.nrg'
     compileSdk 33
@@ -11,6 +22,9 @@ android {
         targetSdk 33
         versionCode 1
         versionName "1.0.0 Alpha"
+
+        buildConfigField "String", "SECRET_KEY", getProps("secret_key")
+        buildConfigField "String", "ALGORYTHM", getProps("algorythm")
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -33,6 +47,7 @@ android {
     }
     buildFeatures {
         compose true
+        buildConfig true
     }
     composeOptions {
         kotlinCompilerExtensionVersion '1.4.3'
