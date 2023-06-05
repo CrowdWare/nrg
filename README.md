@@ -13,7 +13,7 @@ This approach only needs a camera enabled on the device. No internet needed. No 
 And btw, all transactions are stored in a tamper proof local blockchain.
 
 # Base
-NRG is based on the [Minuto](https://www.minuto.wiki) invented by Konstantin Kirsch. Minuto is technically a bearer bond. Someone creates a peace of paper writing on it a value like 100 EUR and states what he will do if someone wants to exchange the Minuto back to him. Maybe: "For his 100 EUR I will give the giver an oil massage for 100 minutes.". The minuto must be signed by two other people, they guarantee with their signature that the bond will be paid back in case the initiator is unavailable.
+NRG is based on the [Minuto](https://www.minuto.wiki) invented by Konstantin Kirsch. Minuto is technically a bearer bond. Someone creates a peace of paper writing on it a value like 100 minutes and states what he will do if someone wants to exchange the Minuto back to him. Maybe: "For his 100 minutes I will give the giver an oil massage.". The minuto must be signed by two other people, they guarantee with their signature that the bond will be paid back in case the initiator is unavailable.
 So, you can hear it in he name, Minuto is time based. Which is essential.
 The Minuto is a legal currency so to say.
 
