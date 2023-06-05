@@ -5,7 +5,7 @@ But if the circle gets much wider, we can not handle that anymore and we use mon
 Using money for energy exchange has the drawback that someday the financial department knocks on your door and asks for some taxes.  
 Don't get e wrong. Taxes have been a good things many many years ago, but nowadays they are way to high (if you live outside of Switzerland) and we all know that they use our taxes for wars and other criminal activities.  
 
-We are creating an app for the mobile phone where we collect energy (NRG) which we can then use for NRG Exchange to show gratitude.  
+We are creating an app for the mobile phone where we can use NRG to show gratitude.  
 
 The process started for me when I quit to work for the banksters in Zürich (Switzerland) 2014 after a burnout and has ended in a few tries without success. Sometimes I was distracted from other things, sometimes I tried to crowdfund a project without resonance and the last attempt was the project SHIFT where I was almost ready to release the first alpha version.  
 Unfortunately this project is now laid on ice. I found a security leak and had to fix that, but before fixing it I found out that the p2p library (IPv8) I have used had no license attached. So I made the decision to rethink the whole project. Wait for them grant me a license or build the internet protocol on my own. I also was thinking about how to get consensus when creating NRG (minting coins). Then I remembered that I solved that problem already in my project NRG and here I am working further on this solution.  
