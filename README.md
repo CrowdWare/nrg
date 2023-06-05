@@ -23,7 +23,7 @@ On first start the app will generate a cryptograhic key pair (private and public
 Then A generates a QR code based on his public key. Then B scans that QR code and knows the public key now.   
 Next B is showing a QR code and let A scan it.  
 All of these four people have to scan eachother.  
-They area now able to make safe transactions using PK encryption.  
+They are now able to make safe transactions using PK encryption.  
 
 Now A is creating a bond with the app for 60 minutes for example. Then he needs two people, a man and a woman, with the same app, signing his bond.  
 After signing he is now able to pay with this bond. The bond is signed with PK encrypion and is added to a local blockchain.  
