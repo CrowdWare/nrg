@@ -17,15 +17,26 @@ NRG is based on the [Minuto](https://www.minuto.wiki) invented by Konstantin Kir
 So, you can hear it in he name, Minuto is time based. Which is essential.
 The Minuto is a legal currency so to say.
 
-# Implementation
-The NRG app will connect people. First four users have to meet in person, two men and two women. 
-On first start the app will generate a cryptograhic key pair (private and public key).
-Then A generates a QR code based on his public key. Then B scans that QR code and knows the public key now. 
-Next B is showing a QR code and let A scan it.
-All of these four people have to scan eachother.
-They area now able to make safe transactions using PK encryption.
+# Implementation  
+The NRG app will connect people. First four users have to meet in person, two men and two women.   
+On first start the app will generate a cryptograhic key pair (private and public key).  
+Then A generates a QR code based on his public key. Then B scans that QR code and knows the public key now.   
+Next B is showing a QR code and let A scan it.  
+All of these four people have to scan eachother.  
+They area now able to make safe transactions using PK encryption.  
 
-Now A is creating a bond with the app for 60 minutes for example. Then he needs two people, a man and a woman, with the same app, signing his bond. 
-After signing he is now able to pay with this bond. The bond is signed with PK encrypion and is added to a local blockchain.
-In the circle of four, two men and two women, everyone is able to let his bond be signed by men and woman.
+Now A is creating a bond with the app for 60 minutes for example. Then he needs two people, a man and a woman, with the same app, signing his bond.  
+After signing he is now able to pay with this bond. The bond is signed with PK encrypion and is added to a local blockchain.  
+In the circle of four, two men and two women, everyone is able to let his bond be signed by men and woman. So everybody in this circle has now a new kind of currency.  
+
+When using the original Minuto it was not possible to split it up. So you could not split a 60 Minuto into 2 x 30 Minutos.  
+This changes when using a computer like your mobile. So you are able to split every minuto into full amounts, so the smalles part is 1 Minuto.
+This split will be stated as a transaction in the blockchain.  
+
+## Demurrage
+There is another difference to the Original Minuto. The original Minuto could not be spent after 3 years. Our NRG looses value over a period of time, which is called demurrage invented by Sylvio Gesell and approved in Wörgl (Austria). The NRG is loosing 0.28 % of value each day, so that it's getting worthless after 7 years. This is handled automatically in the app.  
+
+## Transparency
+The app is able to show the source for each individual NRG, who created it and who signed it at what date.  
+You can also see, how much NRG a user has already created and how many NRG he has accepted. Comparing these values might indicate if a user is trustworthy a all. So when a user is creating thousands of NRG but did not accept any others NRG, we know that this user is not really giving something to the circle, we might not accept his NRG.  
 
