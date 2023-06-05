@@ -22,10 +22,10 @@ package at.crowdware.nrg.ui.theme
 import androidx.compose.ui.graphics.Color
 
 val PrimaryDark = Color(0xFFa0ce4d)
-val SecondaryDark = Color(0xFFa0ce4d)
+val SecondaryDark = Color(0xFF03A9F4)
 val TertiaryDark = Color(0xFFa0ce4d)
-val BackgroundDark = Color(0xFF1a1a1a)
-val SurfaceDark = Color(0xFF1a1a1a)
+val BackgroundDark = Color(0xFF5A6270)
+val SurfaceDark = Color(0xFF454B56)
 val OnPrimaryDark = Color(0xFF000000)
 val OnSecondaryDark = Color(0xFF000000)
 val OnTertiaryDark = Color(0xFF000000)
@@ -33,12 +33,15 @@ val OnBackgroundDark = Color(0xFFFFFFFF)
 val OnSurfaceDark = Color(0xFFFFFFFF)
 
 val PrimaryLight = Color(0xFFa0ce4d)
-val SecondaryLight = Color(0xFFa0ce4d)
+val SecondaryLight = Color(0xFF03A9F4)
 val TertiaryLight = Color(0xFFa0ce4d)
-val BackgroundLight = Color(0xFF1a1a1a)
-val SurfaceLight = Color(0xFF1a1a1a)
+val BackgroundLight = Color(0xFF5A6270)
+val SurfaceLight = Color(0xFF454B56)
 val OnPrimaryLight = Color(0xFF000000)
 val OnSecondaryLight = Color(0xFF000000)
 val OnTertiaryLight = Color(0xFF000000)
 val OnBackgroundLight = Color(0xFFFFFFFF)
 val OnSurfaceLight = Color(0xFFFFFFFF)
+
+
+val LogoBackground = Color(0xFF1A1A1A)

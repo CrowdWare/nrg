@@ -64,7 +64,7 @@ fun TotalDisplay(total: Long) {
                 style = TextStyle(fontSize = 70.sp, fontWeight = FontWeight.Bold),
             )
             Text(
-                "LMC (liter)",
+                "NRG",
                 fontSize = 18.sp,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.align(Alignment.BottomEnd)

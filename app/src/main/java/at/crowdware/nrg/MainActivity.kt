@@ -29,9 +29,13 @@ import androidx.compose.material.icons.filled.Face
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import at.crowdware.nrg.logic.Backend
 import at.crowdware.nrg.logic.LocaleManager
+import at.crowdware.nrg.ui.theme.BackgroundLight
 import at.crowdware.nrg.ui.theme.NrgTheme
 import at.crowdware.nrg.ui.widgets.NavigationItem
 import at.crowdware.nrg.ui.widgets.NavigationView
@@ -44,16 +48,18 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    color = BackgroundLight
                 ) {
                     LocaleManager.init(applicationContext, resources)
+                    Backend.init(applicationContext)
+
                     val list = mutableListOf(
                         NavigationItem("home", Icons.Default.Home, stringResource(R.string.navigation_home)),
                         NavigationItem("friendlist", Icons.Default.Face, stringResource(R.string.navigation_friendlist)),
                         NavigationItem("divider")
                     )
                     // navigation targets which are not listed in the drawer
-                    //list.add(NavigationItem(id = "receive_gratitude_qrcode"))
+                    list.add(NavigationItem(id = "invite"))
                     //list.add(NavigationItem(id = "receive_gratitude"))
                     //list.add(NavigationItem(id = "give_gratitude"))
                     NavigationView(list)

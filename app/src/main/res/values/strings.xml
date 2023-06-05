@@ -12,5 +12,5 @@
     <string name="navigation_about">About</string>
     <string name="about_nrg">About NRG EXCHANGE</string>
     <string name="about_dialog_text">NRG EXCHANGE is the idea to create a new kind medium which we can use for energy exchanges. Like showing gratitude to someone who gave us a service, so that we don\'t have to pay with money.</string>
-
+    <string name="button_done">Done</string>
 </resources>

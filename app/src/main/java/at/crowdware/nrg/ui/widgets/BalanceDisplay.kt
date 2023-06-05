@@ -19,57 +19,41 @@
  ****************************************************************************/
 package at.crowdware.nrg.ui.widgets
 
-import android.content.Context
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardColors
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import at.crowdware.nrg.R
-import at.crowdware.nrg.logic.PersistanceManager
+import at.crowdware.nrg.ui.theme.BackgroundLight
+import at.crowdware.nrg.ui.theme.OnBackgroundLight
+import at.crowdware.nrg.ui.theme.SurfaceLight
 import java.text.NumberFormat
 import java.util.Locale
 
 
 @Composable
-fun BalanceDisplay(balance: Long, displayLiterOnly: Boolean = false) {
+fun BalanceDisplay(balance: Long) {
     val context = LocalContext.current
-    var initValue = !displayLiterOnly
-    if(!displayLiterOnly) {
-        initValue = PersistanceManager.getDisplayMillis(context)
-    }
-    var displayMilliliter by remember { mutableStateOf(initValue) }
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .height(120.dp)
-            .let {
-                if (!displayLiterOnly) {
-                    it.clickable() {
-                        displayMilliliter = !displayMilliliter
-                        PersistanceManager.setDisplayMillis(context, displayMilliliter)
-                    }
-                } else {
-                    it
-                }
-            }
+            .height(120.dp),
+        colors = CardDefaults.cardColors(containerColor = SurfaceLight)
     ) {
         Box(
             modifier = Modifier
@@ -79,29 +63,23 @@ fun BalanceDisplay(balance: Long, displayLiterOnly: Boolean = false) {
             Text(
                 "Balance", fontWeight = FontWeight.Bold,
                 style = TextStyle(fontSize = 18.sp),
-                modifier = Modifier.align(Alignment.TopStart)
+                modifier = Modifier.align(Alignment.TopStart),
+                color = OnBackgroundLight
             )
             AutoSizeText(
-                if (displayMilliliter) {
-                    NumberFormat.getNumberInstance(Locale("de", "DE")).apply {
-                        maximumFractionDigits = 3
-                    }.format(balance.toDouble())
-                } else {
                     NumberFormat.getNumberInstance(Locale("de", "DE")).apply {
                         maximumFractionDigits = 0
-                    }.format((balance.toDouble() / 1000.0f))
-                },
+                    }.format((balance.toDouble()))
+                ,
                 style = TextStyle(fontSize = 70.sp, fontWeight = FontWeight.Bold),
             )
             Text(
-                text = if (displayMilliliter) {
-                    "LMC (ml)"
-                } else {
-                    "LMC (liter)"
-                },
+                "NRG"
+                ,
                 fontSize = 18.sp,
                 fontWeight = FontWeight.Bold,
-                modifier = Modifier.align(Alignment.BottomEnd)
+                modifier = Modifier.align(Alignment.BottomEnd),
+                color = OnBackgroundLight
             )
         }
     }
@@ -110,5 +88,5 @@ fun BalanceDisplay(balance: Long, displayLiterOnly: Boolean = false) {
 @Preview
 @Composable
 fun BalanceDisplayPreview() {
-    BalanceDisplay(balance = 13000L )
+    BalanceDisplay(balance = 13L )
 }

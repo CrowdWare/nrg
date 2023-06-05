@@ -25,6 +25,7 @@ android {
 
         buildConfigField "String", "SECRET_KEY", getProps("secret_key")
         buildConfigField "String", "ALGORYTHM", getProps("algorythm")
+        buildConfigField "String", "KEYPHRASE", getProps("key_phrase")
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -80,5 +81,8 @@ dependencies {
 
     implementation 'com.google.code.gson:gson:2.10.1'
     implementation("com.darkrockstudios:mpfilepicker:1.1.0")
+    implementation("com.simonsickle:composed-barcodes:1.1.1")
+    implementation "com.goterl:lazysodium-android:5.1.0@aar"
+    implementation "net.java.dev.jna:jna:5.8.0@aar"
     implementation files('../composescanner/scanner/build/outputs/aar/scanner-release.aar')
 }

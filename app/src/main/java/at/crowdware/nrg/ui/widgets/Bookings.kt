@@ -43,6 +43,8 @@ import androidx.compose.ui.unit.sp
 import at.crowdware.nrg.R
 import at.crowdware.nrg.logic.Transaction
 import at.crowdware.nrg.logic.TransactionType
+import at.crowdware.nrg.ui.theme.BackgroundLight
+import at.crowdware.nrg.ui.theme.SurfaceLight
 import java.time.format.DateTimeFormatter
 
 @Composable
@@ -50,7 +52,7 @@ fun Bookings(transactions: SnapshotStateList<Transaction>, modifier: Modifier) {
     LazyColumn(
         modifier = modifier
             .fillMaxWidth()
-            .background(Color.LightGray.copy(alpha = 0.3f))
+            .background(SurfaceLight)
     ) {
         items(transactions.size) { index ->
             val transaction = transactions[index]

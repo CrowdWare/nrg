@@ -46,7 +46,13 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import at.crowdware.nrg.R
 import at.crowdware.nrg.ui.pages.Friendlist
+import at.crowdware.nrg.ui.pages.Invite
 import at.crowdware.nrg.ui.pages.ScoopPage
+import at.crowdware.nrg.ui.theme.OnBackgroundLight
+import at.crowdware.nrg.ui.theme.OnPrimaryLight
+import at.crowdware.nrg.ui.theme.OnSurfaceLight
+import at.crowdware.nrg.ui.theme.PrimaryLight
+import at.crowdware.nrg.ui.theme.SurfaceLight
 import kotlinx.coroutines.launch
 
 @Composable
@@ -64,7 +70,7 @@ fun NavigationView(items: MutableList<NavigationItem>) {
                         // have a look at MainActivity for navigation
                         "home" -> ScoopPage()
                         "friendlist" -> Friendlist()
-                        //"receive_gratitude" -> ReceiveGratitude(receiveViewModel)
+                        "invite" -> Invite()
                         //"receive_gratitude_qrcode" -> ReceiveGratitudeQRCode(receiveViewModel)
                         //"give_gratitude" -> GiveGratitude(giveViewModel)
                     }
@@ -93,12 +99,12 @@ fun NavigationDrawer(items: List<NavigationItem>, selectedItem: MutableState<Str
         content = {
             Column() {
                 CenterAlignedTopAppBar(
-                    title = { Text("NRG") },
-                    colors = TopAppBarDefaults.smallTopAppBarColors(
-                        containerColor = MaterialTheme.colorScheme.primary,
-                        titleContentColor = MaterialTheme.colorScheme.onPrimary,
-                        navigationIconContentColor = MaterialTheme.colorScheme.onPrimary,
-                        actionIconContentColor = MaterialTheme.colorScheme.onPrimary
+                    title = { Text("NRG exchange") },
+                    colors = TopAppBarDefaults.topAppBarColors(
+                        containerColor = PrimaryLight,
+                        titleContentColor = OnPrimaryLight,
+                        navigationIconContentColor = OnPrimaryLight,
+                        actionIconContentColor = OnPrimaryLight
                     ),
                     navigationIcon = {
                         IconButton(onClick = { scope.launch { drawerState.open() } }) {
@@ -128,9 +134,12 @@ fun About(openDialog: Boolean, onDismiss: () -> Unit) {
             title = { Text(text = stringResource(R.string.about_nrg)) },
             text = {
                 Text(
-                    stringResource(R.string.about_dialog_text)
+                    stringResource(R.string.about_dialog_text),
+                    color = OnBackgroundLight
                 )
             },
+            titleContentColor = OnSurfaceLight,
+            containerColor = SurfaceLight,
             confirmButton = { TextButton(onClick = onDismiss ) { Text("OK") } },
             dismissButton = {}
         )

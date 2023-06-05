@@ -11,6 +11,6 @@
     <string name="navigation_friendlist">Freundesliste</string>
     <string name="navigation_about">Über</string>
     <string name="about_nrg">Über NRG EXCHANGE</string>
-    <string name="about_dialog_text">NRG EXCHANGE ist die Idee, eine neue Art von Medium zu schaffen, das wir für den Austausch von Energie verwenden können. Ähnlich wie die Dankbarkeit gegenüber jemandem, der uns einen Dienst erwiesen hat, sodass wir nicht mit Geld bezahlen müssen.</string>
+    <string name="about_dialog_text">NRG EXCHANGE ist die Idee, eine neue Art von Medium zu schaffen, das wir für den Austausch von Energie verwenden können. Ähnlich wie die Dankbarkeit gegenüber jemandem, der uns einen Dienst erwiesen hat, sodass wir nicht mit Geld bezahlen müssen. Um zu starten solltest Du zumindest zwei Menschen einladen, die Dir vertrauen, dann fängt Deine App an, NRG für Dich zu sammeln.</string>
 
 </resources>

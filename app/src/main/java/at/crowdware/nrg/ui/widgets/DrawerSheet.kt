@@ -20,6 +20,7 @@
 package at.crowdware.nrg.ui.widgets
 
 import android.app.Activity
+import android.media.tv.TvContract.Channels.Logo
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -61,7 +62,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import at.crowdware.nrg.R
 import at.crowdware.nrg.logic.LocaleManager
+import at.crowdware.nrg.ui.theme.BackgroundLight
+import at.crowdware.nrg.ui.theme.LogoBackground
 import at.crowdware.nrg.ui.theme.NrgTheme
+import at.crowdware.nrg.ui.theme.SurfaceLight
 import kotlinx.coroutines.launch
 
 
@@ -89,7 +93,7 @@ fun DrawerSheet(drawerState: DrawerState, items: List<NavigationItem>, selectedI
         ) {
             Box(
                 modifier = Modifier
-                    .background(MaterialTheme.colorScheme.primary)
+                    .background(LogoBackground)
                     .fillMaxWidth()
                     .height(200.dp)
             ) {

@@ -36,6 +36,8 @@ import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -60,7 +62,11 @@ import at.crowdware.nrg.R
 import at.crowdware.nrg.logic.Backend
 import at.crowdware.nrg.logic.Transaction
 import at.crowdware.nrg.logic.TransactionType
+import at.crowdware.nrg.ui.theme.BackgroundLight
+import at.crowdware.nrg.ui.theme.OnBackgroundLight
+import at.crowdware.nrg.ui.theme.OnPrimaryLight
 import at.crowdware.nrg.ui.theme.OnSecondaryLight
+import at.crowdware.nrg.ui.theme.PrimaryLight
 import at.crowdware.nrg.ui.theme.SecondaryLight
 import at.crowdware.nrg.ui.widgets.NavigationItem
 import kotlinx.coroutines.delay
@@ -72,58 +78,11 @@ import at.crowdware.nrg.ui.widgets.TotalDisplay
 import java.time.LocalDate
 
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ScoopPage(isPreview: Boolean = false) {
-    val errorMessage by remember { mutableStateOf("") }
-    val openDialog = remember { mutableStateOf(false) }
-    /*
-    val sendIntent: Intent = Intent().apply {
-        action = Intent.ACTION_SEND
-        putExtra(
-            Intent.EXTRA_TEXT,
-                "Invite Message",
-               "url",
-                Backend.getAccount().uuid
-            )
-        )
-        type = "text/plain"
-    }*/
+fun ScoopPage() {
     val transactions = remember { mutableStateListOf(*Backend.getTransactions().toTypedArray()) }
-    //val shareIntent = Intent.createChooser(sendIntent, null)
-    val context = LocalContext.current
-    val application = LocalContext.current.applicationContext
     var balance by remember { mutableStateOf(/*Backend.getBalance()*/13L) }
-    var isScooping by remember { mutableStateOf(/*Backend.getAccount().isScooping*/false) }
 
-    if (isPreview) {
-        isScooping = true
-
-    }
-    /*
-    LaunchedEffect(true) {
-        while (true) {
-            //isScooping = Backend.getAccount().isScooping
-            //if (isScooping) {
-            //    balance = Backend.getBalance()
-            //    transactions.clear()
-            //    for(t in Backend.getTransactions()) {
-            //        transactions.add(t)
-            //    }
-        }
-        delay(3000L)
-    }
-
-    ServiceStartRequest(
-        openDialog = openDialog.value,
-        onDismiss = { openDialog.value = false },
-        onConfirm = {
-            openDialog.value = false
-            //if(application is Application)
-            //    Backend.startScooping(application)
-        }
-    )
-*/
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -131,57 +90,41 @@ fun ScoopPage(isPreview: Boolean = false) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         BalanceDisplay(balance)
-        Text(errorMessage, color = Color.Red)
-        if (isScooping) {
-            Row(modifier = Modifier.fillMaxWidth()) {
-                Button(
-                    onClick = { /*NavigationManager.navigate("receive_gratitude")*/ },
-                    modifier = Modifier.weight(1f)
-                ) {
-                    Text("Receive", style = TextStyle(fontSize = 20.sp))
-                }
-                Spacer(modifier = Modifier.width(8.dp))
-                Button(
-                    onClick = { /*NavigationManager.navigate("give_gratitude")*/ },
-                    modifier = Modifier.weight(1f),
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor = SecondaryLight,
-                        contentColor = OnSecondaryLight
-                    )
-                ) {
-                    Text("Give", style = TextStyle(fontSize = 20.sp))
-                }
-            }
 
-        } else {
+        Spacer(modifier = Modifier.height(16.dp))
+        Row(modifier = Modifier.fillMaxWidth()) {
             Button(
-                onClick = { /*openDialog.value = true*/ },
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Text(
-                    "Start scooping",
-                    style = TextStyle(fontSize = 20.sp)
+                onClick = { /*NavigationManager.navigate("receive_gratitude")*/ },
+                modifier = Modifier.weight(1f),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = SecondaryLight,
+                    contentColor = OnSecondaryLight
                 )
+            ) {
+                Text("Receive", style = TextStyle(fontSize = 20.sp))
+            }
+            Spacer(modifier = Modifier.width(8.dp))
+            Button(
+                onClick = { /*NavigationManager.navigate("give_gratitude")*/ },
+                modifier = Modifier.weight(1f),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = PrimaryLight,
+                    contentColor = OnPrimaryLight
+                )
+            ) {
+                Text("Give", style = TextStyle(fontSize = 20.sp))
             }
         }
         Spacer(modifier = Modifier.height(16.dp))
         Text(
             "Bookings", fontWeight = FontWeight.Bold,
             style = TextStyle(fontSize = 18.sp),
-            modifier = Modifier.align(Alignment.Start)
+            modifier = Modifier.align(Alignment.Start),
+            color = OnBackgroundLight
         )
         Spacer(modifier = Modifier.height(4.dp))
         Bookings(transactions, modifier = Modifier.weight(1f))
         Spacer(modifier = Modifier.height(16.dp))
-        Button(
-            onClick = { /*context.startActivity(shareIntent)*/ },
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Text(
-                "Invite friends",
-                style = TextStyle(fontSize = 20.sp)
-            )
-        }
     }
 }
 
@@ -194,22 +137,11 @@ fun MainPagePreview() {
         NavigationItem("home", Icons.Default.Home, "Home"),
         NavigationItem("friendlist", Icons.Default.Face, "Friendlist")
     )
-    NavigationDrawer(list, selectedItem){ ScoopPage(true) }
-}
-
-@Composable
-fun ServiceStartRequest(openDialog: Boolean, onDismiss: () -> Unit, onConfirm: () -> Unit) {
-    if (openDialog) {
-        AlertDialog(
-            onDismissRequest = onDismiss,
-            title = { Text(text = "Start scooping") },
-            text = {
-                Text(
-                    "Start Service"
-                )
-            },
-            confirmButton = { TextButton(onClick = onConfirm ) { Text("OK") } },
-            dismissButton = { TextButton(onClick = onDismiss ) { Text("Dismiss") } }
-        )
+    Surface(
+        modifier = Modifier.fillMaxSize(),
+        color = BackgroundLight//MaterialTheme.colorScheme.background
+    ) {
+        NavigationDrawer(list, selectedItem) { ScoopPage() }
     }
 }
+

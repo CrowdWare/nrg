@@ -28,6 +28,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.text.TextStyle
+import at.crowdware.nrg.ui.theme.OnBackgroundLight
 
 
 @Composable
@@ -48,6 +49,7 @@ fun AutoSizeText(
         },
         style = scaledTextStyle,
         softWrap = false,
+        color = OnBackgroundLight,
         onTextLayout = { textLayoutResult ->
             if (textLayoutResult.didOverflowWidth) {
                 scaledTextStyle =
