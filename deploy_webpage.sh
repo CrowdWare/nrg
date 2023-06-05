@@ -1,0 +1,1 @@
+cp -r docs/* /var/www/nrg/
