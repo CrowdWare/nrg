@@ -18,21 +18,7 @@ So, you can hear it in he name, Minuto is time based. Which is essential.
 The Minuto is a legal currency so to say.
 
 # Implementation
-The NRG app will connect people. First three users have to meet in person. Then A generates a QR code with a public key and a private key which is stored safely on the device. Then B scans that QR code and knows the public key now. Also the MAC address of the phone from A is put in the QR code.  
-Now B establishes a BT (BlueTooth) connection to A and starts to check the app if its the original app.  
-If everything looks good then B signs an agreement that he trusts A and is willing to transfer NRG with him.  
-Then also B is presenting a QR code and A has to sign the agreement.  
-When a user was able to connect to two other users, then his app will start to create NRG tokens on a 20 minutes base. These tokens are kind of signed by the other two users, because they agreed to do so.  
+The NRG app will connect people. First three users have to meet in person. Then A generates a QR code with a public key and a private key which is stored safely on the device. Then B scans that QR code and knows the public key now. 
+Next B is showing a QR code and let A scan it.
+They area now able to make safe transactions.
 
-Each user is able to create 12 tokens each day, when he finds two people who trusts him and the app he's using. Of course the procedure of exchanging public keys is technically checking the account of the other user to be sure that he's using the original version and no faked app. 
-After collecting token for 10 days you have 12 NRG tokens which are worth 2 hours (2 * 60 minutes) of work.
-
-After creating enough NRG tokens the user is able to transfer tokens to other apps also using QR code technique combined with BT.  
-
-Additionally you are able to create more NRG tokens if you invite other users to the circle. This motivates the users to hopefully to spread the word about this project and the app.  
-Maybe one day we can go shopping in a supermarket with this app.
-
-# Plugins
-Wouldn't it be nice if someone creates a plugin where he adds the ability to chat with each other? A chat which is secured using public/private key encryption. Or what about a micro blogging system where users may advertise for their services which can be paid with NRG? Or even a marketplace for goods sold for NRG? What about a dating app?
-
-This is all possible with the possibility to create plugins for NRG.
