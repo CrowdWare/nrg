@@ -20,7 +20,7 @@ The Minuto is a legal currency so to say.
 # Implementation
 The NRG app will connect people. First three users have to meet in person. Then A generates a QR code with a public key and a private key which is stored safely on the device. Then B scans that QR code and knows the public key now. 
 Next B is showing a QR code and let A scan it.
-They area now able to make safe transactions.
+They area now able to make safe transactions using PK encryption.
 
 Now A is creating a bond for 60 minutes for example. Then he needs two people with the same app, signing his bond. After signing he is now able to pay with this bond. The bond is signed with PK encrypion and is added to a local blockchain.
 
