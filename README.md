@@ -9,7 +9,7 @@ We are creating an app for the mobile phone where we can use NRG to show gratitu
 
 The process started for me when I quit to work for the banksters in Zürich (Switzerland) 2014 after a burnout and has ended in a few tries without success. Sometimes I was distracted from other things, sometimes I tried to crowdfund a project without resonance and the last attempt was the project SHIFT where I was almost ready to release the first alpha version.  
 Unfortunately this project is now laid on ice. I found a security leak and had to fix that, but before fixing it I found out that the p2p library (IPv8) I have used had no license attached. So I made the decision to rethink the whole project. Wait for them grant me a license or build the internet protocol on my own. I also was thinking about how to get consensus when creating NRG (minting coins). Then I remembered that I solved that problem already in my project NRG and here I am working further on this solution.  
-This approach only needs a camera and BT enabled on the device. No internet needed. No security risks regarding internet connections.
+This approach only needs a camera enabled on the device. No internet needed. No security risks regarding internet connections.
 And btw, all transactions are stored in a tamper proof local blockchain.
 
 # Base
