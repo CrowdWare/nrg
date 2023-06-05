@@ -18,9 +18,14 @@ So, you can hear it in he name, Minuto is time based. Which is essential.
 The Minuto is a legal currency so to say.
 
 # Implementation
-The NRG app will connect people. First three users have to meet in person. Then A generates a QR code with a public key and a private key which is stored safely on the device. Then B scans that QR code and knows the public key now. 
+The NRG app will connect people. First four users have to meet in person, two men and two women. 
+On first start the app will generate a cryptograhic key pair (private and public key).
+Then A generates a QR code based on his public key. Then B scans that QR code and knows the public key now. 
 Next B is showing a QR code and let A scan it.
+All of these four people have to scan eachother.
 They area now able to make safe transactions using PK encryption.
 
-Now A is creating a bond for 60 minutes for example. Then he needs two people with the same app, signing his bond. After signing he is now able to pay with this bond. The bond is signed with PK encrypion and is added to a local blockchain.
+Now A is creating a bond with the app for 60 minutes for example. Then he needs two people, a man and a woman, with the same app, signing his bond. 
+After signing he is now able to pay with this bond. The bond is signed with PK encrypion and is added to a local blockchain.
+In the circle of four, two men and two women, everyone is able to let his bond be signed by men and woman.
 
