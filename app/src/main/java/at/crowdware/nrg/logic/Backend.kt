@@ -50,52 +50,11 @@ class Backend {
         private var account = Account()
 
         fun init(context: Context) {
-            val memoryUsage = getMemoryUsage(context)
-            val normalizedMemoryUsage = normalizeMemoryUsage(memoryUsage)
-            println("Memory: $memoryUsage $normalizedMemoryUsage")
-            val filesInAPK = getFilesInAPK(context)
-            //for (file in filesInAPK) {
-            //    println("File: $file")
-            //}
             if(!readAccount(context)) {
                 generateKeys()
                 saveAccount(context)
             }
         }
-
-        fun getFilesInAPK(context: Context): List<String> {
-            val applicationInfo: ApplicationInfo = context.applicationInfo
-            val apkPath: String = applicationInfo.sourceDir
-            println("APK:$apkPath")
-            val apkFile = ZipFile(apkPath)
-            val entries = apkFile.entries()
-            val files = mutableListOf<String>()
-
-            while (entries.hasMoreElements()) {
-                val entry = entries.nextElement() as ZipEntry
-                if (!entry.isDirectory) {
-                    val fileName = entry.name
-                    files.add(fileName)
-                }
-            }
-
-            apkFile.close()
-
-            return files
-        }
-
-        fun getMemoryUsage(context: Context): Long {
-            val activityManager = context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
-            val memoryInfo = ActivityManager.MemoryInfo()
-            activityManager.getMemoryInfo(memoryInfo)
-            return memoryInfo.totalMem
-        }
-
-        fun normalizeMemoryUsage(memoryUsage: Long): Long {
-            val normalizationFactor = 1024L // Adjust as needed
-            return memoryUsage / normalizationFactor
-        }
-
 
         fun getAccount(): Account { return account }
 

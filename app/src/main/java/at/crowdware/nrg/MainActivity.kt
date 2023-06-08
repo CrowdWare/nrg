@@ -21,16 +21,14 @@ package at.crowdware.nrg
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Base64
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Face
 import androidx.compose.material.icons.filled.Home
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import at.crowdware.nrg.logic.Backend
@@ -39,8 +37,21 @@ import at.crowdware.nrg.ui.theme.BackgroundLight
 import at.crowdware.nrg.ui.theme.NrgTheme
 import at.crowdware.nrg.ui.widgets.NavigationItem
 import at.crowdware.nrg.ui.widgets.NavigationView
+import nrg.Nrg.add
+import nrg.Nrg.myFunction
 
 class MainActivity : ComponentActivity() {
+    external fun getNativeKey1(): String
+    external fun getNativeKey2(): String
+
+    companion object {
+        init {
+            System.loadLibrary("keys")
+        }
+    }
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -52,6 +63,13 @@ class MainActivity : ComponentActivity() {
                 ) {
                     LocaleManager.init(applicationContext, resources)
                     Backend.init(applicationContext)
+
+                    val key1 = String(Base64.decode(getNativeKey1(), Base64.DEFAULT))
+                    val key2 = String(Base64.decode(getNativeKey2(), Base64.DEFAULT))
+                    println("keys: $key1 $key2")
+
+                    println("myFunction: ${myFunction()}")
+                    println("add: ${add(2,4)}")
 
                     val list = mutableListOf(
                         NavigationItem("home", Icons.Default.Home, stringResource(R.string.navigation_home)),

@@ -35,8 +35,13 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    externalNativeBuild {
+        ndkBuild {
+            path 'src/main/jni/Android.mk'
         }
     }
     compileOptions {
@@ -83,6 +88,8 @@ dependencies {
     implementation("com.darkrockstudios:mpfilepicker:1.1.0")
     implementation("com.simonsickle:composed-barcodes:1.1.1")
     implementation "com.goterl:lazysodium-android:5.1.0@aar"
-    implementation "net.java.dev.jna:jna:5.8.0@aar"
+    implementation "net.java.dev.jna:jna:5.12.1@aar"
+    implementation files('libs/libnrg.aar')
+
     implementation files('../composescanner/scanner/build/outputs/aar/scanner-release.aar')
 }
