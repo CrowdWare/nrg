@@ -7,7 +7,3 @@ func Add(a, b int) int {
 func MyFunction() string {
 	return "Hello from MyFunction!"
 }
-
-func main() {
-	// Empty main function
-}

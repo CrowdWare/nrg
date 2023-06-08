@@ -31,9 +31,7 @@ So in that case the creator and the signers have to meet where there is WLAN.
 The server can verify if all three apps are original.
 
 # Security
-We can put the API key and crypto functions into a C library, which makes it difficult to gather the keys.
-The drawback is that an attacker could also use this lib.
-
-A is showing an encrypted QR code to B (fake). B scans it decrypts it using the lib and can respond also encrypted.
-When I put all of my logic into the C lib then it might work.
-If an attacker is not aware what the app logic is doing its hard to fake the app.
+We are now putting all business logic into a Go lib.
+With Go a main goal will be TDD (test driven development).
+So all API keys and DB passwords are safer than in JVM classes.
+Additionally we close the source (private repo).
