@@ -40,9 +40,9 @@ import java.util.zip.ZipFile
 
 class Backend {
     companion object {
-        private const val secretKey = BuildConfig.SECRET_KEY
-        private const val algorithm = BuildConfig.ALGORYTHM
-        private const val keyPhrase = BuildConfig.KEYPHRASE
+        private const val secretKey = "1234567890123456"
+        private const val algorithm = "AES/GCM/NoPadding"
+        private const val keyPhrase = "1234567812345678"
         private const val PUBLIC_KEY_BYTES = 32
         private const val PRIVATE_KEY_BYTES = 32
         private const val db_name = "account.db"

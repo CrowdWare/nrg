@@ -1,17 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
-def getProps(String propName) {
-    def propsFile = rootProject.file('config.properties')
-    if (propsFile.exists()) {
-        def props = new Properties()
-        props.load(new FileInputStream(propsFile))
-        return props[propName]
-    } else {
-        return "";
-    }
-}
-
 android {
     namespace 'at.crowdware.nrg'
     compileSdk 33
@@ -23,10 +12,6 @@ android {
         versionCode 1
         versionName "1.0.0 Alpha"
 
-        buildConfigField "String", "SECRET_KEY", getProps("secret_key")
-        buildConfigField "String", "ALGORYTHM", getProps("algorythm")
-        buildConfigField "String", "KEYPHRASE", getProps("key_phrase")
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary true
@@ -34,6 +19,12 @@ android {
     }
 
     buildTypes {
+        debug {
+            // Customize the debug build type configuration
+            // For example, you can disable minification or enable debuggable flag
+            minifyEnabled false
+            debuggable true
+        }
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -91,5 +82,5 @@ dependencies {
     implementation "net.java.dev.jna:jna:5.12.1@aar"
     implementation files('libs/libnrg.aar')
 
-    implementation files('../composescanner/scanner/build/outputs/aar/scanner-release.aar')
+    //implementation files('../composescanner/scanner/build/outputs/aar/scanner-release.aar')
 }
