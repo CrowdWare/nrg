@@ -112,8 +112,6 @@ The minutos are still working as money, but they have some drawbacks.
 Do you want to travel more then one hour to get the service from a signer who is living that far away?
 I guess not. So you only accept minutos from people you know who live near by.
 It&#x27;s also not possible to cut a minuto into peaces in case you have to pay 3 minutos and you only have got a 60 minutos paper.
-Another problem is when a student signs a paper with 60 minutos and a master with 30 years experience signs a paper with 60 minutos.
-They are not compareable because they have got a different value.
 &lt;/p&gt;
 &lt;h4&gt;Solution&lt;/h4&gt;
 &lt;p&gt;
@@ -122,24 +120,7 @@ My idea is to create a new crypto currency called NRG (Energy) and a wallet for 
 With this app you are able to create your own money and will be able to pay to someone with the same app.
 The app is able to split minutos into smaller peaces and there is also a solution for the different services with different values.
 &lt;/p&gt;
-&lt;h4&gt;Categories&lt;/h4&gt;
-&lt;p&gt;
-When a student creates an NRG-contract it will become the categorie 1 which gives it a factor of 1 and when a master creates an NRG-contract it will become the category 10 with a factor of 10.
-Now we have got the following formula:&lt;br/&gt;
-&lt;font style=&quot;font-family: Courier;&quot;&gt;energy = time * power&lt;/font&gt;&lt;br/&gt;
-&lt;font style=&quot;font-family: Courier;&quot;&gt;NRG = minutes * category.factor&lt;/font&gt;&lt;br/&gt;
-Example:&lt;br/&gt;
-A student works 60 minutes * factor 1 = 60 NRG&lt;br/&gt;
-A bachelor works 60 minutes * factor 5 = 300 NRG&lt;br/&gt;
-A master works 60 minutes * factor 10 = 600 NRG&lt;br/&gt;
-And if you want to calculate it into € just divide by 10.
-But we should not start to calculate it back to other currencies all the time.
-We don&#x27;t want the NRG be avaiable on the financial market because this would make the price unstable.
-This is also the reason why NRG is based on time.
-That makes it possible to be very fair.
-For example will a student in Finland earn the same amount of NRG than a student in Indonesia in an hour.
-This makes it also possible to be traded all over the world.
-&lt;/p&gt;
+
 &lt;h4&gt;WebOfTrust&lt;/h4&gt;
 &lt;p&gt;
 If you want to use NRG exchange all over the world we need to implement a little trick which is called the web of trust.

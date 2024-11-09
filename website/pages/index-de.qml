@@ -152,8 +152,6 @@ Die Minutos funktionieren bereits heute als Zahlungsmittel, aber sie haben einig
 Möchtest Du mehrere Stunden reisen um einen dieser Minutos einzulösen, wenn der Unterzeichner weit weg wohnt?
 Ich denke nicht. Also wirst du nur Minutos von bekannten Menschen akzeptieren, die in deiner Nähe wohnen.
 Ausserdem ist es nicht möglich, Minutos zu zerstückeln, wenn Du z.B. 3 Minutos zahlen sollst, aber nur einen 60 Minuto in der Tasche hast.
-Ein anderes Problem ist es wenn ein Schüler einen Minuto signiert und wenn ein Meister mit 30 Jahren Berufserfahrung einen signiert.
-Man kann diese beiden Minutos nicht vergleichen, da sie einen anderen Wert haben.
 &lt;/p&gt;
 &lt;h4&gt;Lösung&lt;/h4&gt;
 &lt;p&gt;
@@ -162,25 +160,7 @@ Unsere Idee ist es also eine neue Krypto-Währung zu erschaffen die wir NRG (Ene
 Mit dieser App sind wir in der Lage, unser eigenes Geld zu erschaffen und damit jemanden zu bezahlen, der die selbe App benutzt.
 Diese App ist in der Lage, Minutos in kleinere Einheiten zu teilen und belegt unterschiedliche Dienstleistungen mit unterschiedlichen Werten.
 &lt;/p&gt;
-&lt;h4&gt;Kategorien&lt;/h4&gt;
-&lt;p&gt;
-Wenn ein Schüler ein NRG-Papier erstellt, bekommt es die Kategorie 1, welche einen Faktor 1 besitzt.
-Wenn ein Meister ein NRG-Papier erstellt, bekommt es die Kategorie 10, welche einen Faktor 10 besitzt.
-Nun haben wir die nachfolgende Formel:&lt;br/&gt;
-&lt;font style=&quot;font-family: Courier;&quot;&gt;Energie = Zeit * Kraft&lt;/font&gt;&lt;br/&gt;
-&lt;font style=&quot;font-family: Courier;&quot;&gt;NRG = Minuten * Kategorie.Faktor&lt;/font&gt;&lt;br/&gt;
-Beispiel:&lt;br/&gt;
-Ein Schüler arbeitet 60 Minuten * Faktor 1 = 60 NRG&lt;br/&gt;
-Ein Akademiker arbeitet 60 Minuten * Faktor 5 = 300 NRG&lt;br/&gt;
-Ein Master arbeitet 60 Minuten * Faktor 10 = 600 NRG&lt;br/&gt;
-Und wenn du wissen möchtest wie viel Euros das macht, teile einfach durch 10.
-Aber wir sollten nicht anfangen, alles jedes Mal umzurechnen.
-Wir wollen nicht, das die NRG auf dem freien Handel verspekuliert werden, weil das den Preis instabil macht.
-Das ist auch der Grund, das NRG auf Zeit basieren.
-Das macht das Ganze sehr fair.
-Zum Beispiel verdient ein Schüler aus Finnland damit genau so viel wie ein Schüler in Indonesien für eine Stunde Arbeit.
-Das macht es ausserdem möglich, damit auf der ganzen Welt zu handeln.
-&lt;/p&gt;
+
 &lt;h4&gt;WebOfTrust&lt;/h4&gt;
 &lt;p&gt;
 Wenn Du mit NRG auf der ganze Welt handeln willst, benötigen wir allerdings einen kleinen Trick.
@@ -200,9 +180,9 @@ Wenn Person B danach in seine App schaut, wird er dies gar nicht bemerken, denn 
 &lt;p&gt;
 Wenn wir mal annehmen, dass viele Menschen im ganzen Land diese neue Währung benutzen, dann wird es auch möglich sein, auch über grössere Distanzen zu bezahlen.
 Wir haben z.B. eine Person in Hamburg, die eine andere Person in München bezahlen möchte.
-Zuerst werden die NRG's von dem Hamburger mit einem Bekannten in Hannover getauscht.
-Dann werden die NRG's von dem Hannoveraner mit jemanden in Kassel getauscht.
-Die NRG's aus Kassel werden dann mit jemanden in Würzburg getauscht. Diese werden wiederum in Nürnberg getauscht und schliesslich wird der Münchner damit bezahlt.
+Zuerst werden die NRG&#x27;s von dem Hamburger mit einem Bekannten in Hannover getauscht.
+Dann werden die NRG&#x27;s von dem Hannoveraner mit jemanden in Kassel getauscht.
+Die NRG&#x27;s aus Kassel werden dann mit jemanden in Würzburg getauscht. Diese werden wiederum in Nürnberg getauscht und schliesslich wird der Münchner damit bezahlt.
 Irgendwann könnte es sogar möglich sein, dass wir damit weltweit bezahlen können.
 &lt;/p&gt;"
                     adminlabel: "Lösung"
