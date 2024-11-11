@@ -97,53 +97,83 @@ Content {
                 Text {
                     text: "&lt;h3&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/h3&gt;
 &lt;p class=&quot;lead&quot;&gt;
-There is a guy in Germany who had invented &lt;a href=&quot;http://www.minutocash.org&quot;&gt;minutos&lt;/a&gt;.
+	In Germany, a man developed the idea of &lt;a href=&quot;http://www.minutocash.org&quot;&gt;Minutos&lt;/a&gt;.
 &lt;/p&gt;
 &lt;p&gt;
-Minutos are a new kind of money everbody is able to create on his own.
-Just take a sheet of paper, write what you are able and willing to do if someone wants to give this paper back to you,
-mention who many minutes you want to do the service and sign the paper and you can use it as money.
-This kind of money is worth more than a couple of bank notes because you will get at least a service or goods from the signer.
-In a financial crisis you are only able to use the bank notes to heat your home.
+	Minutos are a form of money that anyone can create themselves. Simply take a sheet of paper and write down the service you are offering and how many minutes you are willing to provide it for. Sign the sheet. This money has real value since it is backed by a specific service. In a financial crisis, banknotes would have little value, while Minutos represent real services.
 &lt;/p&gt;
 &lt;h4&gt;Drawbacks&lt;/h4&gt;
 &lt;p&gt;
-The minutos are still working as money, but they have some drawbacks.
-Do you want to travel more then one hour to get the service from a signer who is living that far away?
-I guess not. So you only accept minutos from people you know who live near by.
-It&#x27;s also not possible to cut a minuto into peaces in case you have to pay 3 minutos and you only have got a 60 minutos paper.
+	Minutos are already being used as a form of payment, but they have some drawbacks. Would you travel several hours to redeem one of these Minutos if the issuer lives far away? Probably not. As a result, Minutos are generally accepted only by trusted people nearby. Additionally, Minutos cannot be split; for example, if you need to pay 3 Minutos but only have a 60-Minuto note, there is no smaller denomination.
 &lt;/p&gt;
 &lt;h4&gt;Solution&lt;/h4&gt;
 &lt;p&gt;
-To avoid the above problems we luckily have got our computers and smartphones.
-My idea is to create a new crypto currency called NRG (Energy) and a wallet for your smatphone and computers called NRG-exchange.
-With this app you are able to create your own money and will be able to pay to someone with the same app.
-The app is able to split minutos into smaller peaces and there is also a solution for the different services with different values.
+	To overcome these challenges, we can use modern technologies like computers and smartphones. The idea is to create a cryptocurrency called NRG (Energy), along with an app called NRG-Exchange. This app would allow people to create their own money and use it for payments. It also allows Minutos to be divided into smaller units.
+&lt;/p&gt;
+&lt;h4&gt;Counterargument&lt;/h4&gt;
+&lt;p&gt;
+	One could argue that by allowing people to create new Minutos anytime, they could theoretically accumulate a debt burden. After all, it could happen that at some point no one accepts the Minutos anymore, and the holders want to redeem them, which would result in a large obligation to work.&lt;br&gt;&lt;br&gt;
+	The problem does exist, but...&lt;br&gt;
+	...why would one create so many Minutos in the first place? Suppose you do not receive wages or unemployment benefits because you do not wish to participate in the current labor market. One plausible reason could be that you do not want to finance the political decisions of your government by paying taxes, as this indirectly supports wars.&lt;br&gt;&lt;br&gt;
+In this situation, you could proceed as follows: First, create a Minuto to secure financial resources for your basic needs over the coming weeks. Use this time to think about which services you can offer to others in your area. Examples could be massages, art, music, or assistance for the elderly. The aim is to use and offer your skills and talents. When you know what you want to do, you can post an ad in a network like &lt;a target=&quot;_blank&quot; href=&quot;https://www.kleinanzeigen.de/&quot;&gt;Kleinanzeigen&lt;/a&gt; or a regional portal and offer your services in exchange for NRG (or Minutos).
+
+It is important to emphasize that you do not issue invoices, sell products, or give gifts. This private, non-commercial form of assistance should be tax-neutral.
+
+Once you start receiving NRG (or Minutos) from other friends, there is no need to create new Minutos. This way, you save on taxes, interest, and credit fees and can offer your services at a lower price than commercial providers. Additionally, you will need to work less since your lifestyle is based on self-sufficiency and minimalism.
 &lt;/p&gt;
 
-&lt;h4&gt;WebOfTrust&lt;/h4&gt;
+&lt;div class=&quot;panel-group&quot; id=&quot;exampleAccordion&quot;&gt;
+    &lt;div class=&quot;panel panel-default&quot;&gt;
+      &lt;div class=&quot;panel-heading&quot;&gt;
+        &lt;h4 class=&quot;panel-title&quot;&gt;
+          &lt;a data-toggle=&quot;collapse&quot; data-parent=&quot;#exampleAccordion&quot; href=&quot;#collapseOne&quot; class=&quot;collapsed&quot;&gt;
+            &lt;i class=&quot;fa fa-chevron-down toggle-icon&quot;&gt;&lt;/i&gt;
+            Calculation Example: How Little Money Is Really Needed
+          &lt;/a&gt;
+        &lt;/h4&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;collapseOne&quot; class=&quot;panel-collapse collapse&quot;&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
 &lt;p&gt;
-If you want to use NRG exchange all over the world we need to implement a little trick which is called the web of trust.
+          Let’s imagine how much less money one actually needs to live if one focuses on the essentials. 
+		Many expenses only arise because people try to maintain an expensive lifestyle with luxury cars, big houses, and constant consumer desires. 
+		But what if we asked ourselves: How much is truly needed to live a good, worry-free life?
+        &lt;/p&gt;
+        &lt;p&gt;
+          An example: I only pay 320€ per month for rent because I don&#x27;t need to live in an expensive downtown location. This not only saves me rent, 
+		but I can also forgo owning a car and instead use a bicycle, which saves money and is better for the environment. 
+		My food expenses are about 300€ per month because I focus on local products and quality. 
+		For all necessary expenses, I spend about 700€ per month.
+        &lt;/p&gt;
+        &lt;p&gt;
+          So, if I earn 30€ per hour, for instance, by offering a massage, I only need to work about 23 hours per month 
+			to cover my living costs. This leaves me more time for things that truly bring me joy and that I do out of conviction, 
+			without constantly feeling the need to work for consumer goods or status symbols.
+        &lt;/p&gt;
+        &lt;p&gt;
+        This calculation may seem unusual at first glance, but it shows that a good, fulfilling life does not have to be expensive. 
+		By deliberately reducing my expenses, I need less money and have more freedom. Imagine what that could mean for your own quality of life!
+        &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;h4&gt;Web of Trust&lt;/h4&gt;
+&lt;p&gt;
+	If you want to use NRG globally, a &quot;Web of Trust&quot; will be necessary. Imagine that Person A knows and trusts Person B, and B knows and trusts Person C. 
+	A and C cannot trade directly because they do not know each other. However, with the help of the app, an indirect exchange can still occur. 
+	NRG from A could first go to B and then from B to C. This way, the system allows payments without direct trust relationships.
 &lt;/p&gt;
+&lt;h4&gt;Paying Over Distances&lt;/h4&gt;
 &lt;p&gt;
-We have person A who knows and trusts person B. They are able to exchange NRG.
-Then there is person C who knows and trusts person B. They are also able to exchange NRG.
-But if person A wants to pay person C we don&#x27;t have this trust.&lt;br&gt;
-But this is not a problem in the computer age ;-)&lt;br/&gt;
-Because the whole system is hosted on servers we are able to exchange NRG even when the person are not online.
-In this specific scenario A could prior to pay person C exchange NRG with person B.
-After this exchange person A hold NRG from person B and can use this NRG to pay person C.
+	If NRG becomes widely used, it could also enable payments over long distances. For example, 
+	a person in Hamburg wants to pay someone in Munich. The NRG could be transferred step-by-step through acquaintances in cities like Hannover, 
+	Kassel, Würzburg, and Nuremberg until it reaches the person in Munich. This could one day enable global exchange.
 &lt;/p&gt;
-&lt;p&gt;
-If person B looks into his wallet the very next day he will not notice that this exchange has happened at all because he only sees the total amount of NRG.
-&lt;/p&gt;
-&lt;h4&gt;Paying over a Distance&lt;/h4&gt;
-&lt;p&gt;
-If we assume that there are many people all over the country are using NRG exchange then it will be possible to pay over higher distances.
-For example a person in Hamburg wants to pay a person in Munich.
-The NRG from the person in Hamburg first will be exchanged with someones NRG in Hannover where the trust each other. Then the NRG from the person from Hannover will be exchanged with someones NRG in Kassel. Then the NRG from the person in Kassel will be exchanged with someones NRG in Würzburg. Then the NRG from the person in Würzburg will be exchanged with someones NRG in Nürnberg and then the person in Munich will be payed with the NRG from the one in Nürnberg.
-And one day we will hopefully be able to use NRG all over the world.
-&lt;/p&gt;"
+
+
+"
                     adminlabel: "Solution"
                 }
             }
