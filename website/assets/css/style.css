@@ -1,1 +1,22 @@
-/* nothing here */
+<!-- Animations-Styles -->
+<style>
+  .panel-title a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .panel-title a .toggle-icon {
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .panel-title a.collapsed .toggle-icon {
+    transform: rotate(0deg);
+  }
+
+  .panel-title a:not(.collapsed) .toggle-icon {
+    transform: rotate(180deg);
+  }
+</style>
